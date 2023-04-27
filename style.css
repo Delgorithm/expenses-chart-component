@@ -1,0 +1,24 @@
+:root{
+    --clr-soft-red:hsl(10,79%,65%);
+    --clr-cyan:hsl(186,34%,60%);
+    --clr-dark-brown: hsl(25,47%,15%);
+    --clr-medium-brown:hsl(28,10%,53%);
+    --clr-cream:hsl(27,66%,92%);
+    --clr-pale-orange:hsl(33,100%,98%);
+
+    --fw-normal:400;
+    --fw-big:700;
+
+    --fs-small: 0.75em;
+    --fs-normal: 1em;
+    --fs-big: 1.35em; 
+}
+
+*{
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.5;
+}
+
