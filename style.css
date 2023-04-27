@@ -9,7 +9,8 @@
     --fw-normal:400;
     --fw-big:700;
 
-    --fs-small: 0.75em;
+    --fs-small: 0.6em;
+    --fs-small-2: 0.7em;
     --fs-normal: 1em;
     --fs-big: 1.35em; 
 }
@@ -22,3 +23,136 @@
     line-height: 1.5;
 }
 
+body{
+    background-color: var(--clr-cream);
+    display: grid;
+    place-content: center;
+    min-height: 100svh;
+}
+
+/* Header */
+
+.header__part{
+    background-color: var(--clr-soft-red);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vmax;
+}
+
+.header-text__part{
+    padding: 1rem;
+    color: var(--clr-pale-orange);
+}
+
+.header-text__part p{
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-small-2);
+}
+
+.icon__theme{
+    position: absolute;
+    left: 250px;
+    top: 162px;
+}
+
+.theme__toggle span{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--clr-pale-orange);
+    border-radius: 100vmax;
+    z-index: 2;
+}
+
+input{
+    opacity: 1;
+}
+
+.theme__toggle span:nth-child(2) {
+    left: 20px;
+    border: 1px solid black;
+    background-color: black;
+    z-index: 1;
+}
+
+/* Main part */
+
+.expenses-chart__part{
+    background-color: var(--clr-pale-orange);
+}
+
+/* Chart part */
+
+.expenses-array__part{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.mon span{
+    display: block;
+    width: 20px;
+    height: 100px;
+    background-color: var(--clr-soft-red);
+}
+
+.tue span{
+    display: block;
+    width: 20px;
+    height: 100px;
+    background-color: var(--clr-soft-red);
+}
+
+.wed span{
+    display: block;
+    width: 20px;
+    height: 100px;
+    background-color: var(--clr-soft-red);
+}
+
+.thu span{
+    display: block;
+    width: 20px;
+    height: 100px;
+    background-color: var(--clr-soft-red);
+}
+
+.fri span{
+    display: block;
+    width: 20px;
+    height: 100px;
+    background-color: var(--clr-soft-red);
+}
+
+.sat span{
+    display: block;
+    width: 20px;
+    height: 100px;
+    background-color: var(--clr-soft-red);
+}
+
+.sun span{
+    display: block;
+    width: 20px;
+    height: 100px;
+    background-color: var(--clr-soft-red);
+}
+
+.mon p,
+.tue p,
+.wed p,
+.thu p,
+.fri p,
+.sat p,
+.sun p{
+    font-size: var(--fs-small);
+    text-align: center;
+}
+
+/* Expenses bottom part */
+.expenses-chart-bottom__part{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
