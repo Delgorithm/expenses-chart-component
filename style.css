@@ -6,13 +6,15 @@
     --clr-cream:hsl(27,66%,92%);
     --clr-pale-orange:hsl(33,100%,98%);
 
-    --fw-normal:400;
+    --fw-normal:500;
     --fw-big:700;
 
     --fs-small: 0.6em;
     --fs-small-2: 0.7em;
     --fs-normal: 1em;
-    --fs-big: 1.35em; 
+    --fs-normal-2: 1.15em;
+    --fs-big: 1.35em;
+    --fs-big-2: 1.5em;
 }
 
 *{
@@ -55,6 +57,7 @@ body{
     position: relative;
     left: 220px;
     top: -80px;
+    width: 0;
 }
 
 .theme__toggle span{
@@ -82,7 +85,7 @@ input{
 
 .expenses-chart__part{
     background-color: var(--clr-pale-orange);
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 1vmax;
 }
 
@@ -94,62 +97,58 @@ input{
     padding: 1rem;
 }
 
-.mon span{
+.expenses-chart__part h1{
+    font-size: var(--fs-normal-2);
+    margin-left: 1rem;
+    font-weight: var(--fw-normal);
+    color: var(--clr-dark-brown);
+}
+
+.expenses-array__part span{
+    border-radius: 0.4vmax;
+}
+
+#weekday{
+    display: flex;
+    flex-direction: column-reverse;
+    cursor: pointer;
+}
+
+#weekday span{
     display: block;
     width: 20px;
-    height: 100px;
     background-color: var(--clr-soft-red);
+}
+
+.mon span{
+    height: 35px;
 }
 
 .tue span{
-    display: block;
-    width: 20px;
-    height: 100px;
-    background-color: var(--clr-soft-red);
+    height: 70px;
 }
 
 .wed span{
-    display: block;
-    width: 20px;
-    height: 100px;
-    background-color: var(--clr-soft-red);
+    height: 110px;
 }
 
 .thu span{
-    display: block;
-    width: 20px;
-    height: 100px;
-    background-color: var(--clr-soft-red);
+    height: 63px;
 }
 
 .fri span{
-    display: block;
-    width: 20px;
-    height: 100px;
-    background-color: var(--clr-soft-red);
+    height: 50px;
 }
 
 .sat span{
-    display: block;
-    width: 20px;
-    height: 100px;
-    background-color: var(--clr-soft-red);
+    height: 90px;
 }
 
 .sun span{
-    display: block;
-    width: 20px;
-    height: 100px;
-    background-color: var(--clr-soft-red);
+    height: 57px;
 }
 
-.mon p,
-.tue p,
-.wed p,
-.thu p,
-.fri p,
-.sat p,
-.sun p,
+.expenses-array__part p,
 .expenses-chart-total__part p,
 .expenses-chart-percentage__part p{
     font-size: var(--fs-small);
@@ -157,7 +156,23 @@ input{
     text-align: center;
 }
 
+.expenses-array__part p{
+    margin-top: 5px;
+}
+
 /* Expenses bottom part */
+
+.expenses-chart-total__part h3{
+    font-size: var(--fs-big-2);
+    font-weight: var(--fw-normal);
+    color: var(--clr-dark-brown);
+    cursor: pointer;
+}
+
+.expenses-chart-total__part p{
+    text-align: left;
+}
+
 .expenses-chart-bottom__part{
     position: relative;
     padding: 1rem;
@@ -185,4 +200,6 @@ input{
     font-size: var(--fs-small-2);
     justify-content: flex-end;
     text-align: end;
+    color: var(--clr-dark-brown);
+    cursor: pointer;
 }
