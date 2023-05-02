@@ -12,14 +12,23 @@ fetch('data.json')
 
 // Chart
 
-const clrCyan = getComputedStyle(document.documentElement).getPropertyValue('--clr-cyan');
-console.log(clrCyan);
+const rootStyles = getComputedStyle(document.documentElement);
 
+const softRed = rootStyles.getPropertyValue('--clr-soft-red');
+
+const clrCyan = rootStyles.getPropertyValue('--clr-cyan');
+
+let isChanged = false;
 
 const dayOfTheWeek = document.getElementById('test');
 
 dayOfTheWeek.addEventListener('click', () => {
-    dayOfTheWeek.style.backgroundColor = clrCyan;
+    if(!isChanged) {
+        dayOfTheWeek.style.backgroundColor = clrCyan;
+    } else {
+        dayOfTheWeek.style.backgroundColor = softRed;
+    }
+    isChanged = !isChanged;
 });
 
 
