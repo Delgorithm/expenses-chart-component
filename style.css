@@ -173,6 +173,8 @@ input{
     text-align: left;
 }
 
+/* Bottom part */
+
 .expenses-chart-bottom__part{
     position: relative;
     padding: 1rem;
@@ -180,14 +182,29 @@ input{
     justify-content: space-between;
 }
 
-.expenses-chart-bottom__part span{
-    display: block;
+/* Span part */
+
+.expenses-chart-span{
     position: absolute;
-    width: 235px;
+    display: flex;
+    justify-content: space-between;
+    width: 234px;
+    top: 0;
+}
+
+.expenses-chart-span span:nth-child(1){
+    width: 117px;
     height: 2px;
-    top: 0px;
     background-color: var(--clr-cream);
 }
+
+.expenses-chart-span span:nth-child(2){
+    width: 117px;
+    height: 2px;
+    background-color:var(--clr-cream);
+}
+
+/* Number part */
 
 .expenses-chart-percentage__part{
     position: relative;
