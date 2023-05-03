@@ -20,15 +20,20 @@ const clrCyan = rootStyles.getPropertyValue('--clr-cyan');
 
 let isChanged = false;
 
-const dayOfTheWeek = document.getElementById('test');
+const days = document.querySelectorAll('.dayOfTheWeek');
 
-dayOfTheWeek.addEventListener('click', () => {
-    if(!isChanged) {
-        dayOfTheWeek.style.backgroundColor = clrCyan;
-    } else {
-        dayOfTheWeek.style.backgroundColor = softRed;
-    }
-    isChanged = !isChanged;
+days.forEach(day => {
+    day.addEventListener('click', () => {
+        if(!isChanged) {
+            day.style.backgroundColor = clrCyan;
+            day.style.transition = "all 500ms";
+            day.style.transform = "scale(1.1)";
+        } else {
+            day.style.backgroundColor = softRed;
+            day.style.transform = "scale(1)";
+        }
+        isChanged = !isChanged;
+    });
 });
 
 
